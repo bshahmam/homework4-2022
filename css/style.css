@@ -1,0 +1,148 @@
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header{
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+a:visited{
+    color: blue;
+}
+
+
+body{
+    font-family: Poppins, serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+.card > header{
+
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+
+div.card{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.pricing{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+
+}
+
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+img#logo{
+    animation: logo 5s infinite;
+}
+
+@keyframes logo {
+    from {width: 25px; opacity: 0;}
+    to {width: 475px; opacity: 1;}
+}
+
+@media screen and (min-width: 900px){
+
+header, .nav_links{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 250px;
+    align-content: center;
+}
+body > header{
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+main{
+    margin-top: 78px;
+}
+}
+@media screen and (prefers-reduced-motion: reduce){
+
+    img#logo{
+        animation: inherit;
+    }
+
+}
+
+@media print{
+
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .pricing{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .card{
+        border: 2px solid #45ADDD;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 325px;
+    }
+
+    .gallery{
+        display: none;
+    }
+    #gallery{
+        display: none;
+    }
+
+    .card li:nth-child(2):after{
+        content: "\1F44D";
+    }
+
+
+
+}
